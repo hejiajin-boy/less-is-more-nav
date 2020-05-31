@@ -3,8 +3,10 @@ const $lastLi = $siteList.find('li.last')
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
 const hashMap = xObject || [
-    { logo: 'A', url: 'https://www.acfun.cn' },
-    { logo: 'B', url: 'https://www.bilibili.com' }
+    { logo: 'A', url: 'https://www.baidu.com' },
+    { logo: 'B', url: 'https://www.bilibili.com' },
+
+
 ]
 const simplifyUrl = (url) => {
     return url.replace('https://', '')
@@ -41,7 +43,7 @@ const render = () => {
 render()
 
 $('.addButton').on('click', () => {
-    let url = window.prompt('请问你要添加的网址是啥？')
+    let url = window.prompt('您的思想天马行空，请添加吧！')
     if (url.indexOf('http') !== 0) {
         url = 'https://' + url
     }
